@@ -10,7 +10,7 @@ function App() {
   const [posts, setPosts] = useState([])
 
   useEffect(()=>{
-    fetch("http://localhost:3000/posts")
+    fetch("https://minestar.onrender.com/posts")
     .then(res => res.json())
     .then(data => setPosts(data))
     .catch(error => console.log("You missed something:" + error))

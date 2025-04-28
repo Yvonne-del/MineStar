@@ -12,7 +12,7 @@ const PostCard = ({image, likes, caption, id, setPosts, posts}) => {
   };
 
   const handleDelete = (postId) => {
-    fetch(`http://localhost:3000/posts/${postId}`, {
+    fetch(`https://minestar.onrender.com/posts/${postId}`, {
       method: "DELETE"
     })
     .then(() => {

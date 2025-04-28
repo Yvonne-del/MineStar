@@ -11,7 +11,7 @@ function EmojiPicker({postId }) {
       const emoji = selectedEmoji.native;
     
       // Fetch the current post from the server
-      fetch(`https://minestar.onrender.com/${postId}`)
+      fetch(`https://minestar.onrender.com/posts/${postId}`)
         .then((res) => res.json())
         .then((postData) => {
           const currentReactions = postData.reactions || {};
@@ -23,7 +23,7 @@ function EmojiPicker({postId }) {
           };
     
           // Send PATCH with the updated full reactions
-          return fetch(`https://minestar.onrender.com/${postId}`, {
+          return fetch(`https://minestar.onrender.com/posts/${postId}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json",

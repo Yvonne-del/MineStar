@@ -24,7 +24,7 @@ const Form = ({onAddPost}) => {
         reactions:{}
       };
   
-      fetch("https://minestar.onrender.com", {
+      fetch("https://minestar.onrender.com/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

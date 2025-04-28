@@ -12,7 +12,7 @@ export default function LikeButton({ initialLikes, postId, onLike }) {
     setLikes(updatedLikes);
   
     // Update the likes in db.json
-    fetch(`http://localhost:3000/posts/${postId}`, {
+    fetch(`https://minestar.onrender.com/${postId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
